@@ -206,12 +206,14 @@ export default function Portfolio() {
               <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
                 Full-Stack Web Developer crafting modern user interfaces and building scalable backend systems with Node.js.              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 rounded-full"
-                >
-                  View My Work
-                </Button>
+                <a href="#projects">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 rounded-full"
+                  >
+                    View My Work
+                  </Button>
+                </a>
                 <Button
                   variant="outline"
                   size="lg"
