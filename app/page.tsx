@@ -214,13 +214,15 @@ export default function Portfolio() {
                     View My Work
                   </Button>
                 </a>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-purple-300 text-purple-600 hover:bg-purple-50 dark:border-purple-600 dark:text-purple-400 dark:hover:bg-purple-900/20 px-8 py-3 rounded-full"
-                >
-                  Download Resume
-                </Button>
+                <a href="/resume.pdf" download>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-purple-300 text-purple-600 hover:bg-purple-50 dark:border-purple-600 dark:text-purple-400 dark:hover:bg-purple-900/20 px-8 py-3 rounded-full"
+                  >
+                    Download Resume
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
