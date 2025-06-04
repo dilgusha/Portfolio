@@ -28,41 +28,45 @@ export default function Portfolio() {
       title: "E-Commerce API Platform",
       description:
         "Scalable REST API for e-commerce platform handling 10k+ concurrent users with advanced caching and real-time inventory management.",
-      tech: ["Node.js", "NestJS", "PostgreSQL", "Redis", "Docker"],
-      link: "#",
+      tech: ["Node.js", "NestJS", "PostgreSQL", "TypeScript"],
+      link: "https://github.com/dilgusha/ecommerce",
     },
     {
       title: "Real-time Chat System",
       description:
         "High-performance chat application with WebSocket connections, message queuing, and horizontal scaling capabilities.",
-      tech: ["Node.js", "Socket.io", "MongoDB", "RabbitMQ", "Kubernetes"],
-      link: "#",
+      tech: ["Node.js", "Socket.io", "MongoDB", "TypeScript"],
+      link: "https://github.com/dilgusha/socket",
     },
     {
-      title: "Microservices Architecture",
+      title: "Social Networking Platform",
       description:
         "Distributed system with 12+ microservices, API gateway, service discovery, and comprehensive monitoring.",
-      tech: ["NestJS", "PostgreSQL", "Docker", "Consul", "Prometheus"],
-      link: "#",
+      tech: ["ExpressJS", "PostgreSQL", "TypeScript"],
+      link: "https://github.com/dilgusha/linkedin-project",
     },
     {
-      title: "Data Analytics Pipeline",
+      title: "Music Platform",
       description:
         "ETL pipeline processing millions of records daily with real-time analytics and automated reporting.",
-      tech: ["Node.js", "Apache Kafka", "ClickHouse", "Docker", "Grafana"],
-      link: "#",
+      tech: ["Nestjs", 'PostgreSQL', "TypeORM", "PostgreSQL"],
+      link: "https://github.com/dilgusha/music-platform",
     },
   ]
 
   const skills = [
     { name: "Node.js", level: 95 },
     { name: "NestJS", level: 90 },
+    { name: "ExpressJS", level: 82 },
     { name: "PostgreSQL", level: 88 },
     { name: "TypeORM", level: 85 },
-    { name: "Docker", level: 82 },
     { name: "React", level: 80 },
     { name: "MongoDB", level: 85 },
-    { name: "Redis", level: 78 },
+    { name: "NextJS", level: 85 },
+    { name: "Tailwind CSS", level: 89 },
+    { name: "Bootstrap", level: 89 },
+    { name: "JavaScript", level: 85 },
+    { name: "TypeScript", level: 80 },
   ]
 
   const testimonials = [
@@ -120,12 +124,12 @@ export default function Portfolio() {
                 >
                   Skills
                 </a>
-                <a
+                {/* <a
                   href="#testimonials"
                   className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                 >
                   Testimonials
-                </a>
+                </a> */}
                 <a
                   href="#contact"
                   className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
@@ -175,12 +179,12 @@ export default function Portfolio() {
                   >
                     Skills
                   </a>
-                  <a
+                  {/* <a
                     href="#testimonials"
                     className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                   >
                     Testimonials
-                  </a>
+                  </a> */}
                   <a
                     href="#contact"
                     className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
@@ -245,24 +249,22 @@ export default function Portfolio() {
                 </div>
                 <div className="space-y-6">
                   <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                    I'm passionate about building the invisible backbone that powers exceptional user experiences. With
-                    expertise in clean architecture and scalable system design, I create robust APIs that handle
-                    millions of requests with grace.
+                    Hi, I’m Dilgusha — a backend developer focused on Node.js and a passionate mentor. I care about clean code, teamwork, and sharing knowledge. I’m always eager to learn new technologies and create meaningful impact in the software world.
                   </p>
-                  <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {/* <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                     My approach combines technical excellence with business understanding, ensuring that every line of
                     code contributes to meaningful solutions. I believe in writing code that not only works today but
                     scales for tomorrow.
-                  </p>
+                  </p> */}
                   <div className="flex flex-wrap gap-3">
                     <span className="px-4 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm">
-                      Clean Architecture
+                      Node.js
                     </span>
                     <span className="px-4 py-2 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 rounded-full text-sm">
-                      Scalable APIs
+                      RESTful APIs
                     </span>
                     <span className="px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm">
-                      System Design
+                      Clean Code
                     </span>
                   </div>
                 </div>
@@ -288,7 +290,15 @@ export default function Portfolio() {
                       <h3 className="text-xl font-semibold text-gray-800 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                         {project.title}
                       </h3>
-                      <ExternalLink className="h-5 w-5 text-gray-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors" />
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="h-5 w-5 text-gray-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors"
+                      >
+                        <ExternalLink className="h-5 w-5" />
+                      </a>
+                      {/* <ExternalLink target="_blank" href={project.link} className="h-5 w-5 text-gray-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors" /> */}
                     </div>
                     <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
@@ -479,9 +489,9 @@ export default function Portfolio() {
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="flex items-center space-x-2 mb-4 md:mb-0">
                 <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold">D</span>
+                  <span className="text-white font-bold">&lt;&gt;</span>
                 </div>
-                <span className="text-lg font-serif font-semibold text-gray-800 dark:text-white">Dilgusha</span>
+                <span className="text-lg font-serif font-semibold text-gray-800 dark:text-white">devPicollo</span>
               </div>
               <div className="flex space-x-6 mb-4 md:mb-0">
                 <a
@@ -503,7 +513,7 @@ export default function Portfolio() {
                   Contact
                 </a>
               </div>
-              <p className="text-gray-500 dark:text-gray-400 text-sm">© 2024 Dilgusha. All rights reserved.</p>
+              <p className="text-gray-500 dark:text-gray-400 text-sm">© {new Date().getFullYear()} Dilgusha. All rights reserved.</p>
             </div>
           </div>
         </footer>
